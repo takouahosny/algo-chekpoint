@@ -1,0 +1,23 @@
+ALGORITHM test
+VAR
+    str: STRING
+    l, nbrW, nbrV, i: INTEGER:=0
+BEGIN
+    Write("Please write a sentence that ends with '.'")
+    Read(str)
+    WHILE (str[i]<> ".") DO
+        l:= l+1
+        IF (str[i]="a" OR str[i]="A" OR str[i]="e" OR str[i]="E" OR str[i]="u" OR str[i]="U" OR str[i]="i" OR str[i]="I" OR str[i]="o" OR str[i]="O" OR str[i]="y" OR str[i]="Y" ) THEN
+            nbrV:= nbrV + 1
+        END_IF
+        IF (str[i]= " ") THEN
+            nbrW := nbrW +1
+        END_IF
+    i:= i+1
+    END_WHILE
+    l:=l+1
+    nbrW:= nbrW+1
+    Write("The length of the sentence is:", l)
+    Write("The number of words is:", nrbW)
+    Write("The numebr of vowels is:", nrbV)
+END
